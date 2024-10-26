@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body>
+    <nav class="px-60 py-6 flex w-full bg-white justify-between items-center">
+        <a href="./index.html">
+            <img src="./img/logo.png" alt="">
+        </a>
+        <p class="text-lg text-lightText">EIN STARKER ARBEITGEBER</p>
+    </nav>
+
+    <section class="px-60 bg-[#F5F4F5]">
+        <!-- left section -->
+        <h6 class="text-2xl text-textprimary font-bold py-5">Personalfragebogen</h6>
+        <div class="flex gap-6">
+            <div>
+                <div class="rounded-lg pt-5 pl-6 pb-[30px] bg-white">
+
+                    <div class="text-lightText flex gap-5 text-xl">
+                        <h1
+                            class="h-full flex items-center justify-center border-2 border-lightText rounded-full font-bold w-[30px]">
+                            5</h1>
+                        <div class="w-[90%] flex flex-col ">
+                            <div class="">
+                                <h6 class="font-semibold mb-6 text-2xl">Dokumenten-Upload</h6>
+                                <p class="text-sm text-[#003767]">Angaben zu steuerpflichtigen Vorbeschäftigungszeiten im
+                                    laufenden Kalenderjahr</p>
+                            </div>
+    
+                            <div class=" mx-auto py-4">
+                                <!-- Table -->
+                                <table class="w-full text-sm text-left text-[#D1D5DB] border-collapse">
+                                    <thead class="text-textprimary bg-[#F5F4F5] border-y-2">
+                                        <tr class="text-[15px]">
+                                            <th class="px-4 py-2">Zeitraum von</th>
+                                            <th class="px-4 py-2">Zeitraum bis</th>
+                                            <th class="px-4 py-2">Art der Beschäftigung</th>
+                                            <th class="px-4 py-2">Tage</th>
+                                            <th class="px-4 py-2"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-base text-textprimary">
+                                        <tr class="border-b border-[#E5E7EB] custom-border">
+                                            <td class="px-4 py-3">01.01.2024</td>
+                                            <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">30.05.2024</td>
+                                            <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">Kaufmann für Versicherungen und Finanzen</td>
+                                            <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">120</td>
+                                            <td class="px-4 py-3 text-center text-gray-500">
+                                                <button class="text-[#7B95AE] px-3 text-sm">
+                                                    <i class="fa-solid fa-trash w-4 h-5"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-b border-[#E5E7EB] custom-border">
+                                            <td class="px-4 py-3">01.01.2024</td>
+                                            <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">30.05.2024</td>
+                                            <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">Kaufmann für Versicherungen und Finanzen</td>
+                                            <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">120</td>
+                                            <td class="px-4 py-3 text-center text-gray-500">
+                                                <button class="text-[#7B95AE] px-3 text-sm">
+                                                    <i class="fa-solid fa-trash w-4 h-5"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+    
+                                <!-- Add new row button -->
+                                <div
+                                    class="mt-4 p-4 border-2 border-dashed border-[#E5E7EB] rounded-lg text-center text-blue-500 cursor-pointer hover:bg-gray-100">
+                                    <button class="flex items-center text-[#003767] text-lg justify-center gap-2">
+                                       <img src="./img/Vector (2).png" alt="">
+                                        weiteren Zeitraum hinzufügen
+                                    </button>
+                                </div>
+                                <div class="flex flex-col gap-8 mt-6">
+                                    <div class="bg-[#F6FCFF] px-5 py-[10px] border border-[#E5F7EB]">
+                                        <h1 class="text-textprimary mb-3 font-semibold text-base">Einwilligung zur
+                                            Bonitätsprüfung</h1>
+                                        <div class="flex gap-3">
+                                            <span class="flex gap-2 rounded-md items-center">
+                                                <input name="radio" type="radio"
+                                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                            </span>
+                                            <p class="text-sm text-textprimary">Ich willige ein, dass eine Bonitätsabfrage
+                                                über die infoscore Consumer Data
+                                                GmbH durchgeführt wird.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-[#F6FCFF] px-5 py-[10px] border border-[#E5F7EB]">
+                                        <h1 class="text-textprimary mb-3 font-semibold text-base">Erklärung des
+                                            Arbeitnehmers</h1>
+                                        <div class="flex gap-3">
+                                            <span class="flex gap-2 rounded-md">
+                                                <input name="radio" type="radio"
+                                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                            </span>
+                                            <p class="text-sm text-textprimary">Ich versichere, dass die vorstehenden
+                                                Angaben der Wahrheit entsprechen. Ich
+                                                verpflichte mich, meinem Arbeitgeber alle Änderungen, insbesondere in Bezug
+                                                auf weitere Beschäftigungen (in Bezug auf Art, Dauer und Entgelt)
+                                                unverzüglich mitzuteilen.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-[#F6FCFF] px-5 py-[10px] border border-[#E5F7EB]">
+                                        <h1 class="text-textprimary mb-3 font-semibold text-base">Datenschutz</h1>
+                                        <div class="flex gap-3">
+                                            <span class="flex gap-2 rounded-md items-center">
+                                                <input name="radio" type="radio"
+                                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                            </span>
+                                            <p class="text-sm text-textprimary">Ich willige ein, dass eine Bonitätsabfrage
+                                                über die infoscore Consumer Data GmbH durchgeführt wird.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="mt-10">
+                                <div class="">
+                                    <div class="flex border-t border-b border-[#D1D5DB] items-center">
+                                        <h6 class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-[240px]">Datum
+                                            <span class="text-[#BF1528]">*</span>
+                                        </h6>
+                                        <div class="ml-3 flex items-center gap-5 w-[325px]">
+                                            <h6 class="text-textprimary text-lg">15.05.2024</h6>
+                                        </div>
+                                    </div>
+                                    <div class="flex border-t border-b h-full border-[#D1D5DB] items-center">
+                                        <div class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-[240px]">
+                                            <h6>
+                                                Unterschrift Arbeitnehmer<span class="text-[#BF1528]">*</span></h6>
+                                        </div>
+                                        <div class="ml-3 flex items-center gap-5 w-[325px]">
+                                            <img src="./img/image 2.png" class="h-[93px] w-[250px]" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <a href="page5.html"
+                                class="bg-[#EE7F06] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">Personalfragebogen
+                                einrichen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between text-sm text-[#6B7280] my-[30px]">
+                    <h6>© 2024 Copyright iwv GmbH & Co. KG</h6>
+                    <h6>Impressum | Datenschutzerklärung</h6>
+                </div>
+            </div>
+            <!-- right section -->
+            <div class="flex justify-center w-[20%] min-h-screen bg-gray-100">
+                <div class="w-64">
+                    <!-- Step 1 -->
+                    <div class="flex items-start mb-6">
+                        <div class="relative flex items-center">
+                            <div
+                                class="w-6 h-6 flex items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
+                                <i
+                                    class="fa-solid flex fa-check items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
+                            </div>
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-[#1C93C5] font-semibold" font-semibold>Schritt 1</h4>
+                            <p class="text-sm text-[#[#003767]]">Persönliche
+                            <p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start mb-6">
+                        <div class="relative flex items-center">
+                            <div
+                                class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
+                                <i
+                                    class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
+                            </div>
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-[#1C93C5] font-semibold" font-semibold>Schritt 2</h4>
+                            <p class="text-sm text-[#[#003767]]">Persönliche
+                            <p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start mb-6">
+                        <div class="relative flex items-center">
+                            <div
+                                class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
+                                <i
+                                    class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
+                            </div>
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-[#1C93C5] font-semibold" font-semibold>Schritt 3</h4>
+                            <p class="text-sm text-[#[#003767]]">Persönliche
+                            <p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex items-start mb-6">
+                        <div class="relative flex items-center">
+                            <div
+                                class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
+                                <i
+                                    class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
+                            </div>
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-[#1C93C5] font-semibold" font-semibold>Schritt 4</h4>
+                            <p class="text-sm text-[#[#003767]]">Persönliche
+                            <p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="flex items-start mb-6">
+                        <div class="relative flex items-center">
+                            <div
+                                class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#1C93C5] text-textpriborder-[#1C93C5]">
+                                <span class="block w-3 h-3 bg-[#1C93C5] rounded-full"></span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-[#1C93C5] font-semibold" font-semibold>Schritt 5</h4>
+                            <p class="text-sm text-[#[#003767]]">Persönliche
+                            <p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
