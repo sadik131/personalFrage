@@ -9,54 +9,55 @@
 </head>
 
 <body>
-    <nav class="px-60 py-6 flex w-full bg-white justify-between items-center">
+    <nav class="px-4 lg:px-60 py-6 flex w-full bg-white justify-between items-center">
         <a href="./index.html">
             <img src="./img/logo.png" alt="">
         </a>
         <p class="text-lg text-lightText">EIN STARKER ARBEITGEBER</p>
     </nav>
 
-    <section class="px-60 bg-[#F5F4F5]">
+    <section class="px-4 lg:px-60 bg-[#F5F4F5]">
         <!-- left section -->
-        <h6 class="text-lg text-textprimary font-bold py-5">Personalfragebogen</h6>
+        <h6 class="text-2xl text-textprimary font-bold py-9">Personalfragebogen</h6>
         <div class="flex gap-6">
             <div>
                 <div class="rounded-md pt-5 pl-6 pb-[30px] bg-white">
                     <div class="text-lightText flex gap-5 items-center text-xl">
                         <span
-                            class="w-[30px] flex items-center justify-center border-2 font-bold border-lightText rounded-full">2</span>
-                        <h6 class="font-semibold">Beschäftigung</h6>
+                            class="w-[48px] h-[48px] text-2xl flex items-center justify-center border-2 font-bold border-lightText rounded-full">2</span>
+                        <h6 class="font-semibold text-2xl">Beschäftigung</h6>
                     </div>
-                    <div class="mx-14 mt-10">
+                    <div class="lg:mx-14 mt-10">
                         <div class="flex gap-5">
                             <div class="flex border-t border-b border-[#D1D5DB] pr-11 ">
-                                <div class="bg-[#f5f4f5] pt-3 w-[240px] h-full pl-4 text-textprimary">
+                                <div class="bg-[#f5f4f5] pt-3 w-[265px] h-full pl-4 text-textprimary">
                                     <h1>Üben Sie weitere Beschäftigungen aus?</h1>
                                 </div>
     
                                 <div class="ml-3 flex py-3 justify-center gap-2 flex-col">
                                     <div class="flex gap-5 w-[300px]">
                                         <span class="flex gap-2 rounded-md items-center">
-                                            <input name="radio" type="radio"
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                            <input name="radio5" type="radio" checked
+                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] group-checked:h-3 group-checked:w-3 bg-[#F5F4F5] cursor-pointer">
                                             <label class="text-textprimary text-3">ja</label>
-                                        </span>x
+                                        </span>
                                         <span class="flex gap-2 rounded-md items-center">
                                             <input name="radio" type="radio"
                                                 class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
                                             <label class="text-textprimary text-3">nein</label>
                                         </span>
                                     </div>
-                                    <p>Handelt es sich hierbei um eine geringfügige Beschäftigung?</p>
+                                    <p class="text-sm text-textprimary">Handelt es sich hierbei um eine geringfügige Beschäftigung?</p>
                                     <div class="flex items-center gap-5 w-[300px]">
                                         <span class="flex gap-2 rounded-md items-center">
+                                            
                                             <input name="radio" type="radio"
                                                 class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
                                             <label class="text-textprimary text-3">ja</label>
                                         </span>
                                         <span class="flex gap-2 rounded-md items-center">
-                                            <input name="radio" type="radio"
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                            <input name="1radio" type="radio" checked
+                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] group-checked:h-3 group-checked:w-3 bg-[#F5F4F5] cursor-pointer">
                                             <label class="text-textprimary text-3">nein</label>
                                         </span>
                                     </div>
@@ -75,8 +76,8 @@
                                         <label class="text-textprimary text-3">ohne Schulabschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input name="radio" type="radio"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input name="radio4" type="radio" checked
+                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] group-checked:h-3 group-checked:w-3 bg-[#F5F4F5] cursor-pointer">
                                         <label class="text-textprimary text-3">Mittlere Reife/gleichwertiger
                                             Abschluss</label>
                                     </span>
@@ -86,9 +87,9 @@
                                         <label class="text-textprimary text-3">Haupt-/Volksschulabschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input name="radio" type="radio"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3">Abitur/Fachabitur</label>
+                                        <input name="2radio" type="radio"
+                                            class="peer appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md bg-[#F5F4F5] cursor-pointer checked:bg-[#1C93C5]">
+                                        <label class="text-textprimary text-3 peer-checked:h-3 peer-checked:w-3">Abitur/Fachabitur</label>
                                     </span>
     
                                 </div>
@@ -111,8 +112,8 @@
                                         <label class="text-textprimary text-3">Anerkannte Berufsausbildung</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input name="radio" type="radio"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input name="radio" type="radio" checked
+                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] group-checked:h-3 group-checked:w-3 bg-[#F5F4F5] cursor-pointer">
                                         <label class="text-textprimary text-3">Meister/Techniker/gleichwertiger
                                             Fachschulabschluss</label>
                                     </span>
@@ -133,6 +134,29 @@
                                     </span>
                                 </div>
                             </div>
+                            
+                        </div>
+                        <div class="mt-16">
+                            <div class="flex gap-5">
+                                <div class="flex border-t border-b border-[#D1D5DB] pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-[135px] lg:w-[240px]">
+                                        Beginn der Ausbildung<span class="text-[#BF1528]">*</span></h6>
+                                    <div class="ml-3 flex items-center gap-5 w-[300px]">
+                                        <h6 class="text-textprimary text-lg">02.10.1982</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="flex border-t border-b border-[#D1D5DB] pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-[135px] lg:w-[240px]">
+                                        Voraussichtliches Ende der Ausbildung<span class="text-[#BF1528]">*</span></h6>
+                                    <div class="ml-3 flex items-center gap-5 w-[300px]">
+                                        <h6 class="text-textprimary text-lg">02.10.1982</h6>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <a href="page3.html"
                             class="bg-[#1C93C5] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">weiter
@@ -146,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-center min-h-screen bg-gray-100">
+            <div class="hidden lg:flex justify-center min-h-screen bg-gray-100">
                 <div class="w-64">
                     <!-- Step 1 -->
                     <div class="flex items-start mb-6">
@@ -154,14 +178,15 @@
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
                                 <i
+                                style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
-                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-[#1C93C5]">
                             </div>
                         </div>
                         <div class="ml-4">
                             <h4 class="text-[#1C93C5] font-semibold" font-semibold>Schritt 1</h4>
-                            <p class="text-sm text-[#[#003767]]">Persönliche
+                            <p class="text-sm text-[#003767]">Persönliche
                             <p>
                         </div>
                     </div>
@@ -169,8 +194,8 @@
                     <!-- Step 2 -->
                     <div class="flex items-start mb-6">
                         <div class="relative flex items-center">
-                            <div class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-gray-300">
-                                <span class="block w-3 h-3 bg-[#1C93C5] rounded-full"></span>
+                            <div class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-lightText">
+                                <span class="block w-[10px] h-[10px] bg-[#1C93C5] rounded-full"></span>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
                             </div>

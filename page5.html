@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <nav class="px-60 py-6 flex w-full bg-white justify-between items-center">
+    <nav class="px-4 lg:px-60 py-6 flex w-full bg-white justify-between items-center">
         <a href="./index.html">
             <img src="./img/logo.png" alt="">
         </a>
         <p class="text-lg text-lightText">EIN STARKER ARBEITGEBER</p>
     </nav>
 
-    <section class="px-60 bg-[#F5F4F5]">
+    <section class="px-4 lg:px-60 bg-[#F5F4F5]">
         <!-- left section -->
-        <h6 class="text-2xl text-textprimary font-bold py-5">Personalfragebogen</h6>
+        <h6 class="text-2xl text-textprimary font-bold py-9">Personalfragebogen</h6>
         <div class="flex gap-6">
             <div>
                 <div class="rounded-lg pt-5 pl-6 pb-[30px] bg-white">
@@ -30,7 +30,7 @@
                         <div class="w-[90%] flex flex-col ">
                             <div class="">
                                 <h6 class="font-semibold mb-6 text-2xl">Dokumenten-Upload</h6>
-                                <p class="text-sm text-[#003767]">Angaben zu steuerpflichtigen Vorbeschäftigungszeiten im
+                                <p class="text-sm font-bold text-[#003767]">Angaben zu steuerpflichtigen Vorbeschäftigungszeiten im
                                     laufenden Kalenderjahr</p>
                             </div>
     
@@ -38,12 +38,12 @@
                                 <!-- Table -->
                                 <table class="w-full text-sm text-left text-[#D1D5DB] border-collapse">
                                     <thead class="text-textprimary bg-[#F5F4F5] border-y-2">
-                                        <tr class="text-[15px]">
-                                            <th class="px-4 py-2">Zeitraum von</th>
-                                            <th class="px-4 py-2">Zeitraum bis</th>
-                                            <th class="px-4 py-2">Art der Beschäftigung</th>
-                                            <th class="px-4 py-2">Tage</th>
-                                            <th class="px-4 py-2"></th>
+                                        <tr class="text-[15px] ">
+                                            <th class="px-4 font-normal py-2">Zeitraum von</th>
+                                            <th class="px-4 font-normal py-2">Zeitraum bis</th>
+                                            <th class="px-4 font-normal py-2">Art der Beschäftigung</th>
+                                            <th class="px-4 font-normal py-2">Tage</th>
+                                            <th class="px-4 font-normal py-2"></th>
                                         </tr>
                                     </thead>
                                     <tbody class="text-base text-textprimary">
@@ -74,7 +74,7 @@
     
                                 <!-- Add new row button -->
                                 <div
-                                    class="mt-4 p-4 border-2 border-dashed border-[#E5E7EB] rounded-lg text-center text-blue-500 cursor-pointer hover:bg-gray-100">
+                                    class="mt-4 p-4 border-2 flex justify-center border-dashed border-[#E5E7EB] rounded-lg text-center text-blue-500 cursor-pointer hover:bg-gray-100">
                                     <button class="flex items-center text-[#003767] text-lg justify-center gap-2">
                                        <img src="./img/Vector (2).png" alt="">
                                         weiteren Zeitraum hinzufügen
@@ -135,7 +135,7 @@
                                     </div>
                                     <div class="flex border-t border-b h-full border-[#D1D5DB] items-center">
                                         <div class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-[240px]">
-                                            <h6>
+                                            <h6 class="h-[100px]">
                                                 Unterschrift Arbeitnehmer<span class="text-[#BF1528]">*</span></h6>
                                         </div>
                                         <div class="ml-3 flex items-center gap-5 w-[325px]">
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <!-- right section -->
-            <div class="flex justify-center w-[20%] min-h-screen bg-gray-100">
+            <div class="hidden lg:flex justify-center w-[20%] min-h-screen bg-gray-100">
                 <div class="w-64">
                     <!-- Step 1 -->
                     <div class="flex items-start mb-6">
@@ -166,9 +166,10 @@
                             <div
                                 class="w-6 h-6 flex items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
                                 <i
+                                style="display: flex;"
                                     class="fa-solid flex fa-check items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
-                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
                             </div>
                         </div>
                         <div class="ml-4">
@@ -184,9 +185,10 @@
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
                                 <i
+                                style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
-                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
                             </div>
                         </div>
                         <div class="ml-4">
@@ -202,9 +204,10 @@
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
                                 <i
+                                style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
-                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
                             </div>
                         </div>
                         <div class="ml-4">
@@ -220,9 +223,10 @@
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
                                 <i
+                                style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
-                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
+                            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
                             </div>
                         </div>
                         <div class="ml-4">
