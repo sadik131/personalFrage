@@ -863,6 +863,10 @@ video {
   width: 48px;
 }
 
+.w-\[100\%\] {
+  width: 100%;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1176,6 +1180,10 @@ video {
 
 .pr-6 {
   padding-right: 1.5rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .text-left {
