@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .custom-radio {
+        position: relative;
+    }
+
+    .custom-radio:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px; 
+        height: 10px; 
+        background-color: white;  
+        border-radius: 50%; 
+    }
+}

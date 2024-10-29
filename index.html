@@ -13,109 +13,125 @@
 </head>
 
 <body class="font-roboto">
-    <nav class="px-4 lg:px-60 py-6 flex w-full bg-white justify-between items-center">
+    <nav class="px-4 lg:px-60 py-6 flex w-full bg-white justify-center lg:justify-between items-center">
         <a href="./index.html">
             <img src="./img/logo.png" alt="">
         </a>
-        <p class="text-sm lg:text-lg text-lightText">EIN STARKER ARBEITGEBER</p>
+        <p class="hidden lg:flex text-sm lg:text-lg text-lightText">EIN STARKER ARBEITGEBER</p>
     </nav>
     <section class="px-4 lg:px-60 bg-[#F5F4F5]">
         <!-- left section -->
-        <h6 class="text-2xl text-textprimary font-bold py-9">Personalfragebogen</h6>
+        <h6 class="text-2xl text-textprimary text-center lg:text-start font-bold py-9">Personalfragebogen</h6>
         <div class="block lg:flex gap-6">
-            <div>
-                <div class="rounded-lg pt-5 pr-6 lg:pr-0 pl-6 pb-[30px] bg-white">
+            <form onsubmit="handleSubmit(event)">
+                <div class="rounded-lg pt-5 lg:pr-0 px-6 pb-[30px] bg-white">
                     <div class="text-lightText flex gap-5 items-center text-xl">
                         <span
                             class="w-[30px] flex items-center justify-center border-2 border-lightText rounded-full font-bold">1</span>
                         <h6 class="font-semibold">Persönliche Angaben</h6>
                     </div>
+
+                    <!-- 1st input -->
                     <div class="lg:mx-14 mt-10">
                         <div class="flex gap-5">
-                            <div
-                                class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
-                                <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
-                                    Geschlecht</h6>
-                                <div class="p-[14px] flex items-center gap-5 w-[300px]">
+                            <div class="block lg:flex pr-0 w-full">
+                                <h6 class="bg-[#F5F4F5] border-x lg:border-x-0 border-y border-[#D1D5DB] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
+                                    Geschlecht
+                                </h6>
+                                <div class="p-[14px] border-y border-x lg:border-x-0 border-[#D1D5DB] flex items-center gap-5 w-full lg:w-[300px]">
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input name="radio" type="radio" checked
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] group-checked:h-3 group-checked:w-3 bg-[#F5F4F5] cursor-pointer">
+                                        <input name="gender" type="radio" value="männlich" checked
+                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] cursor-pointer"
+                                            onchange="getSelectedGender()">
                                         <label class="text-textprimary text-3">männlich</label>
                                     </span>
-
+                    
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input name="radio" type="radio"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input name="gender" type="radio" value="divers"
+                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] cursor-pointer"
+                                            onchange="getSelectedGender()">
                                         <label class="text-textprimary text-3">divers</label>
                                     </span>
+                    
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input name="radio" type="radio"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input name="gender" type="radio" value="weiblich"
+                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] cursor-pointer"
+                                            onchange="getSelectedGender()">
                                         <label class="text-textprimary text-3">weiblich</label>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 2nd input -->
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
                             <div
-                                class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
-                                <h6 class="bg-[#F5F4F5] p-[14px] text-[13px] text-textprimary w-full lg:w-[240px]">
-                                    Familienname
-                                    ggf.
-                                    Geburtsname <span class="text-[#BF1528]">*</span></h6>
-                                <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                    <h6 class="text-textprimary text-sm">Mädche</h6>
+                                class="block lg:flex pr-0 border-x lg:border-x-0 border-y border-[#D1D5DB] w-full  items-center">
+                                <div
+                                    class="bg-[#F5F4F5] p-[14px] text-[13px] lg:h-full text-textprimary w-full lg:w-[240px]">
+                                    <h6 class="">
+                                        Familienname
+                                        ggf.
+                                        Geburtsname <span class="text-[#BF1528]">*</span></h6>
+                                </div>
+                                <div class="p-[14px] flex border-t-2 lg:border-t-0 border-[#D1D5DB] items-center gap-5 lg:w-[300px]">
+                                    <input type="text" class="focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 3rd input -->
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
                             <div
-                                class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
+                                class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] pr-0 w-full  items-center">
                                 <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
                                     Vorname <span class="text-[#BF1528]">*</span></h6>
-                                <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                    <h6 class="text-textprimary text-sm">Mädche</h6>
+                                <div class="p-[14px] border-t-2 lg:border-t-0 border-[#D1D5DB]  flex items-center gap-5 w-full lg:w-[300px]">
+                                    <input type="text" class="focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- 4th input -->
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
                             <div
-                                class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
+                                class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] pr-0 w-full  items-center">
                                 <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
                                     Straße und Hausnummer<span class="text-[#BF1528]">*</span></h6>
-                                <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                    <h6 class="text-textprimary text-sm">Sudetenstr. 31</h6>
+                                <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                    <input type="text" class="focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- 5th input -->
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
                             <div
-                                class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
+                                class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] pr-0 w-full  items-center">
                                 <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">PLZ,
                                     Ort<span class="text-[#BF1528]">*</span></h6>
-                                <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                    <h6 class="text-textprimary text-sm">64839 Münster / Altheim</h6>
+                                <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                    <input type="text" class="focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- 6th input -->
                     <div>
                         <div class="lg:mx-14 mt-10">
                             <div class="flex gap-5">
                                 <div
-                                    class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
+                                    class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] pr-0 w-full  items-center">
                                     <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
                                         Geburtsdatum</h6>
-                                    <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                        <h6 class="text-textprimary text-sm">02.10.1982</h6>
+                                    <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                        <input type="text" class="focus:outline-none text-textprimary w-full">
 
                                     </div>
                                 </div>
@@ -124,89 +140,135 @@
                         <div class="lg:mx-14">
                             <div class="flex gap-5">
                                 <div
-                                    class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
+                                    class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] pr-0 w-full  items-center">
                                     <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
                                         Geburtsort, -land
                                         <span class="text-[#BF1528]">*</span>
                                     </h6>
-                                    <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                        <h6 class="text-textprimary text-sm">Mädche</h6>
+                                    <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                        <input type="text" class="focus:outline-none text-textprimary w-full">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="lg:mx-14">
                             <div class="flex gap-5">
-                                <div class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full items-center">
-                                    <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
-                                        Staatsangehörigkeit<span class="text-[#BF1528]">*</span></h6>
-                                    <div class="p-[14px] flex items-center w-[340px] pr-5 justify-between gap-5">
-                                        <h6 class="text-textprimary text-sm">deutsch</h6>
-                                        <i class="fa-solid text-[#EE7F06] w-[11px] h-[6px] fa-angle-down"></i>
+                                <div
+                                    class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] w-full items-center">
+                                    <h6 class="bg-[#F5F4F5] lg:h-full p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
+                                        Staatsangehörigkeit<span class="text-[#BF1528]">*</span>
+                                    </h6>
+                                    <div
+                                        class="p-[14px] flex items-center w-[340px] pr-5 justify-between gap-5 relative">
+                                        <select id="nationality"
+                                            class="p-2 focus:border-none focus:outline-none w-full appearance-none">
+                                            <option value="" disabled selected>Select your nationality</option>
+                                            <option value="afghan">Afghan</option>
+                                            <option value="albanian">Albanian</option>
+                                            <option value="algerian">Algerian</option>
+                                            <option value="american">American</option>
+                                            <option value="argentine">Argentine</option>
+                                            <option value="australian">Australian</option>
+                                            <option value="austrian">Austrian</option>
+                                            <option value="bangladeshi">Bangladeshi</option>
+                                            <option value="belgian">Belgian</option>
+                                            <option value="brazilian">Brazilian</option>
+                                            <option value="british">British</option>
+                                            <option value="canadian">Canadian</option>
+                                            <option value="chinese">Chinese</option>
+                                            <option value="dutch">Dutch</option>
+                                            <option value="egyptian">Egyptian</option>
+                                            <option value="french">French</option>
+                                            <option value="german">German</option>
+                                            <option value="indian">Indian</option>
+                                            <option value="italian">Italian</option>
+                                            <option value="japanese">Japanese</option>
+                                            <option value="mexican">Mexican</option>
+                                            <option value="nigerian">Nigerian</option>
+                                            <option value="russian">Russian</option>
+                                            <option value="south-african">South African</option>
+                                            <option value="spanish">Spanish</option>
+                                            <option value="ukrainian">Ukrainian</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <i
+                                            class="fa-solid text-[#EE7F06] w-[11px] h-[6px] fa-angle-down absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="lg:mx-14">
-                            <div class="flex gap-5">
-                                <div class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full items-center">
-                                    <h6 class="bg-[#F5F4F5] p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
-                                        Familienstand<span class="text-[#BF1528]">*</span></h6>
-                                    <div class="p-[14px] flex items-center w-[340px] pr-5 justify-between gap-5">
-                                        <h6 class="text-textprimary text-sm">ledig</h6>
-                                        <i class="fa-solid text-[#EE7F06] w-[11px] h-[6px] fa-angle-down"></i>
 
+                        <div class="lg:mx-14">
+                            <div class="flex gap-5">
+                                <div
+                                    class="block lg:flex border-x lg:border-x-0 border-y border-[#D1D5DB] w-full items-center">
+                                    <h6 class="bg-[#F5F4F5] lg:h-full p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
+                                        Marital Status<span class="text-[#BF1528]">*</span>
+                                    </h6>
+                                    <div
+                                        class="p-[14px] flex items-center w-[340px] pr-5 justify-between gap-5 relative">
+                                        <select id="marital-status"
+                                            class="p-2 focus:border-none focus:outline-none w-full appearance-none">
+                                            <option value="" disabled selected>Select your marital status</option>
+                                            <option value="single">Single</option>
+                                            <option value="married">Married</option>
+                                            <option value="divorced">Divorced</option>
+                                            <option value="widowed">Widowed</option>
+                                            <option value="separated">Separated</option>
+                                            <option value="in_a_relationship">In a Relationship</option>
+                                        </select>
+                                        <i
+                                            class="fa-solid text-[#EE7F06] w-[11px] h-[6px] fa-angle-down absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div>
                         <div class="lg:mx-14 my-10">
                             <div class="flex gap-5">
-                                <div
-                                    class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 w-full lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5] pr-0 
-                                     p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
-                                        Schwerbehindert</h6>
-                                    <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                        <span class="flex gap-2 rounded-md items-center">
-                                            <input name="radio" type="radio"
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-textpriborder-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                            <label class="text-textprimary text-3">ja</label>
-                                        </span>
-                                        <span class="flex gap-2 rounded-md items-center">
-                                            <span class="flex gap-2 rounded-md items-center">
-                                                <input name="radio" type="radio" checked
-                                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] group-checked:h-3 group-checked:w-3 bg-[#F5F4F5] cursor-pointer">
-                                                <label class="text-textprimary text-3">nein</label>
-                                            </span>
-
-                                        </span>
+                                <div class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] pr-0 w-full  items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5] pr-0 p-[14px] text-[15px] text-textprimary w-full lg:w-[240px]">
+                                        Schwerbehindert
+                                    </h6>
+                                    <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                        <label class="flex gap-2 rounded-md items-center">
+                                            <input name="schwerbehindert" type="radio" value="ja"
+                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] cursor-pointer">
+                                            <span class="text-textprimary text-xs">ja</span>
+                                        </label>
+                                        <label class="flex gap-2 rounded-md items-center">
+                                            <input name="schwerbehindert" type="radio" value="nein" checked
+                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] cursor-pointer">
+                                            <span class="text-textprimary text-xs">nein</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div>
                         <div class="lg:mx-14">
                             <div class="block lg:flex gap-5">
-                                <div class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5] w-full lg:w-[240px] p-[14px] text-textprimary text-xs ">
+                                <div class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] pr-0  items-center">
+                                    <h6 class="bg-[#F5F4F5] h-full w-full lg:w-[240px] p-[14px] text-textprimary text-xs ">
                                         IBAN<span class="text-[#BF1528]">*</span></h6>
-                                    <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                        <h6 class="text-textprimary text-sm">GENODE51MIC</h6>
+                                    <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                        <input type="text" class="focus:outline-none text-textprimary w-full">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="lg:mx-14">
                             <div class="block lg:flex gap-5">
-                                <div class="block lg:flex border-t border-b border-[#D1D5DB] pr-0 lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5] w-full lg:w-[240px] p-[14px] text-textprimary text-xs">
+                                <div class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] pr-0  items-center">
+                                    <h6 class="bg-[#F5F4F5] h-full w-full lg:w-[240px] p-[14px] text-textprimary text-xs">
                                         BIC<span class="text-[#BF1528]">*</span></h6>
-                                    <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                        <h6 class="text-textprimary text-sm">GENODE51MIC</h6>
+                                    <div class="p-[14px] flex items-center gap-5 border-t-2 lg:border-t-0 w-full lg:w-[300px]">
+                                        <input type="text" class="focus:outline-none text-textprimary w-full">
                                     </div>
                                 </div>
                             </div>
@@ -216,11 +278,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex items-center justify-between text-sm text-[#6B7280] my-[30px]">
+                <div class="flex items-center justify-between text-xs lg:text-sm text-[#6B7280] my-[30px]">
                     <h6>© 2024 Copyright iwv GmbH & Co. KG</h6>
                     <h6>Impressum | Datenschutzerklärung</h6>
                 </div>
-            </div>
+            </form>
             <!-- right section -->
             <div class="lg:flex hidden justify-center min-h-screen bg-gray-100">
                 <div class="w-64">
