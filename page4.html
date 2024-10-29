@@ -1,146 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/output.css">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<body class="font-roboto">
     <nav class="px-4 lg:px-60 py-6 flex w-full bg-white justify-center lg:justify-between items-center">
         <a href="./index.html">
             <img src="./img/logo.png" alt="">
         </a>
-        <p class="text-lg hidden lg:block text-lightText">EIN STARKER ARBEITGEBER</p>
+        <p class="hidden lg:flex text-sm lg:text-lg text-lightText">EIN STARKER ARBEITGEBER</p>
     </nav>
-
     <section class="px-4 lg:px-60 bg-[#F5F4F5]">
         <!-- left section -->
-        <h6 class="text-2xl text-center lg:text-start text-textprimary font-bold py-9">Dokumenten-Upload</h6>
-        <div class="flex gap-6">
+        <h6 class="text-2xl text-textprimary text-center lg:text-start font-bold py-9">Personalfragebogen</h6>
+        <div class="block lg:flex gap-6">
             <div>
-                <div class="rounded-md pt-5 pr-10 pl-6 pb-[30px] bg-white">
-                    <div class="text-lightText flex gap-5 text-xl">
-                        <h1
-                            class=" flex items-center justify-center border-2 border-lightText rounded-full font-bold w-[40px] h-[40px]">
-                            4</h1>
-                        <div class="w-[100%] flex flex-col gap-5">
-                            <!-- 1st -->
-                            <div class=" flex flex-col gap-6">
-                                <h6 class="font-semibold">Steuer u. Versicherung</h6>
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold mb-2 text-base">Personalausweis (Vorder- und Rückseite)</h4>
-                                        <div class="text-xs  flex items-center gap-3">
-                                            <i style="display: flex;"
-                                                class="flex items-center rounded-sm justify-center h-4 w-4 bg-[#55AA00] text-white  fa-solid fa-check"></i>
-                                             <p class="">Personalausweis-Scann-2024-vs-rs1.pdf</p>
-                                        </div>
-                                    </div>
-                                    <button class="bg-[#C7C7C7] text-[#f5f4f5] px-3 text-sm">
-                                        <i class="fa-solid fa-trash "></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 2nd -->
-                            <div class="">
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold mb-2 text-[13px]">KV-Karte (Vorder- und Rückseite) o.
-                                            Bescheinigung einer PKV</h4>
-                                            <div class="text-xs flex items-center gap-3">
-                                                <i style="display: flex;"
-                                                    class="flex items-center rounded-sm justify-center h-4 w-4 bg-[#55AA00] text-white  fa-solid fa-check"></i>
-                                                 <p class="">KV-Karte-Vorder-und-Rückseite.pdf</p>
-                                            </div>
-                                    </div>
-                                    <button class="bg-[#C7C7C7] text-[#f5f4f5] px-3 text-sm">
-                                        <i class="fa-solid fa-trash "></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 3rd -->
-                            <div class="">
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold mb-2 text-base">Sozialversicherungsnachweis</h4>
-                                        <div class="text-xs  flex items-center gap-3">
-                                            <i style="display: flex;"
-                                                class="flex items-center rounded-sm justify-center h-4 w-4 bg-[#55AA00] text-white  fa-solid fa-check"></i>
-                                             <p class="">saozialversicherungsnachweis.pdf</p>
-                                        </div>
-                                    </div>
-                                    <button class="bg-[#C7C7C7] text-[#f5f4f5] px-3 text-sm">
-                                        <i class="fa-solid fa-trash "></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 4th -->
-                            <div class="">
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold text-base mb-2">VWL-Vertrag (falls vorhanden)</h4>
-                                        <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
-                                    </div>
-                                    <button class="bg-[#1C93C5] text-[#f5f4f5] px-3 text-sm">
-                                        <i class="fa-solid fa-file"></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 5th -->
-                            <div class="">
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold text-base mb-2">Nachweis Elterneigenschaft</h4>
-                                        <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
-                                    </div>
-                                    <button class="bg-[#1C93C5] text-[#f5f4f5] px-3 text-sm">
-                                        <i class="fa-solid fa-file"></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 6th -->
-                            <div class="">
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold text-base mb-2">Polizeiliches Führungszeugnis</h4>
-                                        <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
-                                    </div>
-                                    <button class="bg-[#1C93C5] text-[#f5f4f5] px-3 text-sm">
-                                        <i class="fa-solid fa-file"></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- 7th -->
-                            <div class="">
-                                <div class="flex border-2 p-4  border-[#C4C8CE] w-full justify-between">
-                                    <div class="text-textprimary">
-                                        <h4 class="font-bold text-[13px] mb-2">Nachweis über die Qualifizierung im
-                                            Versicherungswesen </h4>
-                                        <div class="flex justify-between">
-                                            <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
-                                            <p class="font-semibold mt-2 text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
-                                        </div>
-                                    </div>
-                                    <button class="bg-[#1C93C5] text-[#f5f4f5] h-12 px-3 text-sm">
-                                        <i class="fa-solid fa-file"></i>
-                                        Datei entfernen
-                                    </button>
-                                </div>
-                            </div>
-                            <a href="page5.html"
-                                class="bg-[#1C93C5] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">weiter
-                                <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
+                <div class="rounded-lg pt-5 px-6 pb-[30px] bg-white">
+                    <div class="text-lightText flex gap-5 pb-9 items-center text-xl">
+                        <span
+                            class="w-[40px] h-[40px] flex items-center justify-center border-2 border-lightText rounded-full font-bold">4</span>
+                        <h6 class="font-semibold">Personalfragebogen</h6>
                     </div>
+
+                    <div class="w-[100%] flex flex-col gap-5">
+                        <!-- 1st -->
+                        <div class=" flex flex-col gap-6">
+                            <div class="flex flex-col lg:flex-row border-2 p-4  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold mb-2 text-base">Personalausweis (Vorder- und Rückseite)</h4>
+                                    <div class="text-xs  flex items-center gap-3">
+                                        <i style="display: flex;"
+                                            class="flex items-center rounded-sm justify-center h-4 w-4 bg-[#55AA00] text-white  fa-solid fa-check"></i>
+                                         <p class="">Personalausweis-Scann-2024-vs-rs1.pdf</p>
+                                    </div>
+                                </div>
+                                <button class="bg-[#C7C7C7] h-12 mt-3 text-[#f5f4f5]  px-3 text-sm">
+                                    <i class="fa-solid fa-trash "></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 2nd -->
+                        <div class="">
+                            <div class="flex border-2 p-4 flex-col lg:flex-row  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold mb-2 text-[13px]">KV-Karte (Vorder- und Rückseite) o.
+                                        Bescheinigung einer PKV</h4>
+                                        <div class="text-xs flex items-center gap-3">
+                                            <i style="display: flex;"
+                                                class="flex items-center rounded-sm justify-center h-4 w-4 bg-[#55AA00] text-white  fa-solid fa-check"></i>
+                                             <p class="">KV-Karte-Vorder-und-Rückseite.pdf</p>
+                                        </div>
+                                </div>
+                                <button class="bg-[#C7C7C7] text-[#f5f4f5] h-12 mt-3 px-3 text-sm">
+                                    <i class="fa-solid fa-trash "></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 3rd -->
+                        <div class="">
+                            <div class="flex border-2 p-4 flex-col lg:flex-row  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold mb-2 text-base">Sozialversicherungsnachweis</h4>
+                                    <div class="text-xs  flex items-center gap-3">
+                                        <i style="display: flex;"
+                                            class="flex items-center rounded-sm justify-center h-4 w-4 bg-[#55AA00] text-white  fa-solid fa-check"></i>
+                                         <p class="">saozialversicherungsnachweis.pdf</p>
+                                    </div>
+                                </div>
+                                <button class="bg-[#C7C7C7] text-[#f5f4f5] h-12 mt-3 px-3 text-sm">
+                                    <i class="fa-solid fa-trash "></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 4th -->
+                        <div class="">
+                            <div class="flex border-2 p-4 flex-col lg:flex-row  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold text-base mb-2">VWL-Vertrag (falls vorhanden)</h4>
+                                    <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
+                                </div>
+                                <button class="bg-[#1C93C5] text-[#f5f4f5] h-12 mt-3 px-3 text-sm">
+                                    <i class="fa-solid fa-file"></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 5th -->
+                        <div class="">
+                            <div class="flex border-2 p-4 flex-col lg:flex-row  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold text-base mb-2">Nachweis Elterneigenschaft</h4>
+                                    <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
+                                </div>
+                                <button class="bg-[#1C93C5] text-[#f5f4f5] h-12 mt-3 px-3 text-sm">
+                                    <i class="fa-solid fa-file"></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 6th -->
+                        <div class="">
+                            <div class="flex border-2 p-4 flex-col lg:flex-row  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold text-base mb-2">Polizeiliches Führungszeugnis</h4>
+                                    <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
+                                </div>
+                                <button class="bg-[#1C93C5] text-[#f5f4f5] h-12 mt-3 px-3 text-sm">
+                                    <i class="fa-solid fa-file"></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 7th -->
+                        <div class="">
+                            <div class="flex border-2 p-4 flex-col lg:flex-row  border-[#C4C8CE] w-full justify-between">
+                                <div class="text-textprimary">
+                                    <h4 class="font-bold text-[13px] mb-2">Nachweis über die Qualifizierung im
+                                        Versicherungswesen </h4>
+                                    <div class="flex justify-between">
+                                        <p class="text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
+                                        <p class="font-semibold mt-2 text-xs">Datei (PDF, JPG, PNG), max. 2MB*</p>
+                                    </div>
+                                </div>
+                                <button class="bg-[#1C93C5] text-[#f5f4f5] h-12 mt-3  px-3 text-sm">
+                                    <i class="fa-solid fa-file"></i>
+                                    Datei entfernen
+                                </button>
+                            </div>
+                        </div>
+                        <a href="page5.html"
+                            class="bg-[#1C93C5] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">weiter
+                            <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
                 </div>
                 <div class="flex items-center justify-between text-xs lg:text-sm text-[#6B7280] my-[30px]">
                     <h6>© 2024 Copyright iwv GmbH & Co. KG</h6>

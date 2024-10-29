@@ -872,6 +872,10 @@ video {
   width: 100%;
 }
 
+.w-\[40\] {
+  width: 40;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1207,6 +1211,10 @@ video {
   padding-top: 1.25rem;
 }
 
+.pb-9 {
+  padding-bottom: 2.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1435,6 +1443,10 @@ video {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-\[92px\] {
+    height: 92px;
   }
 
   .lg\:w-\[240px\] {
