@@ -1168,6 +1168,16 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-\[14px\] {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.py-\[14px\] {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 .pb-9 {
   padding-bottom: 2.25rem;
 }
@@ -1450,6 +1460,10 @@ video {
     width: 300px;
   }
 
+  .lg\:w-\[340px\] {
+    width: 340px;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1473,6 +1487,10 @@ video {
 
   .lg\:border-t-0 {
     border-top-width: 0px;
+  }
+
+  .lg\:p-\[14px\] {
+    padding: 14px;
   }
 
   .lg\:px-60 {
