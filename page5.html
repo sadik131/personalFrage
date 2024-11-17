@@ -46,19 +46,25 @@
                             <tbody id="table-body" class="text-base text-textprimary">
                                 <tr class="border-b border-[#E5E7EB] custom-border">
                                     <td class="px-4 py-3">
-                                        <input type="date" class="w-full bg-transparent text-textprimary" placeholder="Start Date">
+                                        <input type="date" class="w-full bg-transparent text-textprimary"
+                                            placeholder="Start Date">
                                     </td>
                                     <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">
-                                        <input type="date" class="w-full bg-transparent text-textprimary" placeholder="End Date">
+                                        <input type="date" class="w-full bg-transparent text-textprimary"
+                                            placeholder="End Date">
                                     </td>
                                     <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">
-                                        <input type="text" class="focus:outline-none w-full bg-transparent text-textprimary" placeholder="Job Title">
+                                        <input type="text"
+                                            class="focus:outline-none w-full bg-transparent text-textprimary"
+                                            placeholder="Job Title">
                                     </td>
                                     <td class="px-4 py-3 border-x-2 border-[#E5E7EB]">
-                                        <input type="number" class="focus:outline-none w-full bg-transparent text-textprimary" placeholder="Days">
+                                        <input type="number"
+                                            class="focus:outline-none w-full bg-transparent text-textprimary"
+                                            placeholder="Days">
                                     </td>
-                                    <td class="px-4 py-3 text-center text-gray-500">
-                                        <button class="text-[#7B95AE] px-3 text-sm delete-row">
+                                    <td class="py-3 text-center text-gray-500">
+                                        <button class="text-[#7B95AE] text-sm delete-row">
                                             <i class="fa-solid fa-trash w-4 h-5"></i>
                                         </button>
                                     </td>
@@ -68,67 +74,80 @@
                     </div>
 
                     <!-- Add New Row Button -->
-                    <div class="mt-4 p-4 border-2 flex justify-center bg-[#F5F4F5] border-dashed border-[#E5E7EB] rounded-lg text-center text-blue-500 cursor-pointer hover:bg-gray-100">
-                        <button class="flex items-center text-[#003767]  text-lg justify-center gap-2" onclick="addTableRow()">
+                    <div
+                        class="mt-4 p-4 border-2 flex justify-center bg-[#F5F4F5] border-dashed border-[#E5E7EB] rounded-lg text-center text-blue-500 cursor-pointer hover:bg-gray-100">
+                        <button class="flex items-center text-[#003767]  text-lg justify-center gap-2"
+                            onclick="addTableRow()">
                             <img src="./img/Vector (2).png" alt="Add Row Icon">
                             weiteren Zeitraum hinzufügen
                         </button>
                     </div>
 
                     <div class="border-2 p-4 bg-[#F6FCFF] my-8 text-textprimary border-[#D1D5DB]">
-                        <h1 class="text-[15px] font-semibold">Einwilligung zur Bonitätsprüfung</h1>
+                        <h1 class="text-[15px] font-semibold" onclick="toggleRadio('widerspruch')">Einwilligung zur Bonitätsprüfung</h1>
                         <div class="flex gap-2 mt-2 items-start">
                             <div>
-                                <input name="radio" type="radio" value="widerspruch" id="widerspruch"
-                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer" onchange="captureSelection()">
+                                <input id="widerspruch" name="widerspruch" type="radio" value="widerspruch"
+                                    class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer">
                             </div>
-                            <label for="widerspruch" class="text-sm">Ich willige ein, dass eine Bonitätsabfrage über die infoscore Consumer Data GmbH durchgeführt wird.</label>
-                        </div>
-                    </div>
-                    <div class="border-2 p-4 bg-[#F6FCFF] mb-8 text-textprimary border-[#D1D5DB]">
-                        <h1 class="text-[15px] font-semibold">Erklärung des Arbeitnehmers</h1>
-                        <div class="flex gap-2 mt-2 items-start">
-                            <div>
-                                <input name="radio" type="radio" value="widerspruch" id="widerspruch"
-                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer" onchange="captureSelection()">
-                            </div>
-                            <label for="widerspruch" class="text-sm">Ich versichere, dass die vorstehenden Angaben der Wahrheit entsprechen. Ich
-                                verpflichte mich, meinem Arbeitgeber alle Änderungen, insbesondere in Bezug auf weitere Beschäftigungen (in Bezug auf Art, Dauer und Entgelt) unverzüglich mitzuteilen.</label>
-                        </div>
-                    </div>
-                    <div class="border-2 p-4 bg-[#F6FCFF] mb-8 text-textprimary border-[#D1D5DB]">
-                        <h1 class="text-[15px] font-semibold">Datenschutz</h1>
-                        <div class="flex gap-2 mt-2 items-start">
-                            <div>
-                                <input name="radio" type="radio" value="widerspruch" id="widerspruch"
-                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer" onchange="captureSelection()">
-                            </div>
-                            <label for="widerspruch" class="text-sm">Ich willige ein, dass eine Bonitätsabfrage über die infoscore Consumer Data GmbH durchgeführt wird.</label>
+                            <label for="widerspruch" class="text-sm">Ich willige ein, dass eine Bonitätsabfrage über die
+                                infoscore Consumer Data GmbH durchgeführt wird.</label>
                         </div>
                     </div>
                     
+                    <div class="border-2 p-4 bg-[#F6FCFF] mb-8 text-textprimary border-[#D1D5DB]">
+                        <h1 class="text-[15px] font-semibold" onclick="toggleRadio('widerspruc')">Erklärung des Arbeitnehmers</h1>
+                        <div class="flex gap-2 mt-2 items-start">
+                            <div>
+                                <input id="widerspruc" name="widerspruc" type="radio" value="widerspruc"
+                                    class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer">
+                            </div>
+                            <label for="widerspruc" class="text-sm">Ich versichere, dass die vorstehenden Angaben der
+                                Wahrheit entsprechen. Ich verpflichte mich, meinem Arbeitgeber alle Änderungen, insbesondere in Bezug auf weitere
+                                Beschäftigungen (in Bezug auf Art, Dauer und Entgelt) unverzüglich mitzuteilen.</label>
+                        </div>
+                    </div>
+                    
+                    <div class="border-2 p-4 bg-[#F6FCFF] mb-8 text-textprimary border-[#D1D5DB]">
+                        <h1 class="text-[15px] font-semibold" onclick="toggleRadio('widerspru')">Datenschutz</h1>
+                        <div class="flex gap-2 mt-2 items-start">
+                            <div>
+                                <input id="widerspru" name="widerspru" type="radio" value="widerspru"
+                                    class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer">
+                            </div>
+                            <label for="widerspru" class="text-sm">Ich willige ein, dass eine Bonitätsabfrage über die
+                                infoscore Consumer Data GmbH durchgeführt wird.</label>
+                        </div>
+                    </div>
+
 
                     <div class="mt-10">
                         <div class="block lg:flex border-t border-b border-[#D1D5DB] items-center">
-                            <h6 class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-full lg:w-[240px]">Datum <span class="text-[#BF1528]">*</span></h6>
+                            <h6 class="bg-[#F5F4F5] text-[15px] text-textprimary pl-4 py-2 w-full lg:w-[240px]">Datum
+                                <span class="text-[#BF1528]">*</span>
+                            </h6>
                             <div class="ml-3 flex items-center gap-5 w-[325px]">
                                 <input type="date" class="focus:outline-none text-textprimary w-full">
                             </div>
                         </div>
                         <div class="block lg:flex border-t border-b h-full border-[#D1D5DB] items-center">
-                            <div class="bg-[#F5F4F5] text-[15px] lg:h-[92px] text-textprimary pl-4 py-2 w-full lg:w-[240px]">
+                            <div
+                                class="bg-[#F5F4F5] text-[15px] lg:h-[92px] text-textprimary pl-4 py-2 w-full lg:w-[240px]">
                                 <h6>Unterschrift Arbeitnehmer<span class="text-[#BF1528]">*</span></h6>
                             </div>
-                            <div class="ml-0 lg:ml-3 flex items-center gap-5 w-[325px]">
+                            <div class="ml-0 flex items-center gap-5 w-[325px]">
                                 <!-- Canvas for signature -->
-                                <canvas id="signatureCanvas" class="border cursor-crosshair border-gray-300 h-[93px] w-[250px]"></canvas>
-                                <button id="clearButton" class="mt-2 px-3 py-1 bg-blue-500 text-white rounded">Clear</button>
+                                <canvas id="signatureCanvas"
+                                    class="cursor-crosshair h-[93px] w-full"></canvas>
+                                
                             </div>
                         </div>
                     </div>
 
-                    <a href="page5.html" class="bg-[#EE7F06] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">Personalfragebogen einrichen</a>
-                    
+                    <a href="page5.html"
+                        class="bg-[#EE7F06] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">Personalfragebogen
+                        einrichen</a>
+
                 </div>
                 <div class="flex items-center justify-between text-[10px] lg:text-sm text-[#6B7280] my-[30px]">
                     <h6>© 2024 Copyright iwv GmbH & Co. KG</h6>
@@ -143,8 +162,7 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 flex items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                style="display: flex;"
+                                <i style="display: flex;"
                                     class="fa-solid flex fa-check items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
@@ -162,8 +180,7 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                style="display: flex;"
+                                <i style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
@@ -181,8 +198,7 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                style="display: flex;"
+                                <i style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
@@ -200,8 +216,7 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                style="display: flex;"
+                                <i style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">

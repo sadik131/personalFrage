@@ -5,13 +5,21 @@ A brief description of what this project does and who it's for
 
 
 ## PDF of website
-page1 web :https://drive.google.com/file/d/14qdU57g_LQer8-_Oidz1fUXrPrN-bYjL/view?usp=sharing
-*------------------*
-mobile :https://drive.google.com/file/d/1w9h0Tw4k686YpwEIDHYAQ-KvFL7j-gi7/view?usp=sharing
+
+https://personal-frage.vercel.app/
 
 
+## Features
 
-## Documentation
+* Responsive design with Tailwind CSS
 
-[Documentation](https://linktodocumentation)
+* FontAwesome icons for visual enhancements
 
+* Clean, minimalistic layout and structure
+
+## Technologies Used
+
+* Tailwind CSS: For utility-first styling and responsiveness
+* HTML: The foundational markup of the application
+* FontAwesome: Used for icons
+    

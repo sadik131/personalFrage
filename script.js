@@ -29,10 +29,6 @@ const canvas = document.getElementById('signatureCanvas');
         ctx.closePath();
     });
 
-    // Clear canvas
-    document.getElementById('clearButton').addEventListener('click', () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    });
 
     // For touch devices
     canvas.addEventListener('touchstart', (e) => {
@@ -143,7 +139,91 @@ const canvas = document.getElementById('signatureCanvas');
      // Get the container element
      const documentList = document.getElementById("document-list");
 
-     // Generate and insert HTML
-     documents.forEach((doc, index) => {
-         documentList.innerHTML += generateDocumentHTML(doc, index);
-     });
+    //  // Generate and insert HTML
+    //  documents.forEach((doc, index) => {
+    //      documentList.innerHTML += generateDocumentHTML(doc, index);
+    //  });
+
+    //  date piker
+    // flatpickr(".flatpickr", {
+    //     dateFormat: "Y-m-d",
+    // });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     flatpickr("#datePicker", {
+    //         dateFormat: "m.d.Y", // Set the format to mm.dd.yyyy
+    //     });
+    // });
+    // document.getElementById("datePicker").addEventListener("change", function () {
+    //     let dateValue = this.value; // Get the value in yyyy-mm-dd format
+    //     if (dateValue) {
+    //         let dateParts = dateValue.split("-"); // Split the date into [yyyy, mm, dd]
+    //         let formattedDate = `${dateParts[1]}.${dateParts[2]}.${dateParts[0]}`; // Reformat to mm.dd.yyyy
+    //         this.value = formattedDate; // Set the new value back to the input
+    //     }
+    // });
+
+    function toggleRadio(radioId) {
+        console.log("Radio ID:", radioId); // This will log the radioId to check if the function is triggered.
+
+        const radioButton = document.getElementById(radioId);
+        const radios = document.getElementsByName(radioButton.name);
+
+        // If the radio button is already checked, uncheck it
+        if (radioButton.checked) {
+            radioButton.checked = false;
+        } else {
+            // Uncheck all other radio buttons with the same name
+            radios.forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Check the selected radio button
+            radioButton.checked = true;
+        }
+    }
+    
+
+    // // radio toggle
+    // function toggleRadio() {
+    //     var radioButton = document.getElementById("widerspruch");
+    //     // If the radio button is already checked, uncheck it
+    //     if (radioButton.checked) {
+    //         radioButton.checked = false;
+    //     } else {
+    //         // If the radio button is not checked, check it
+    //         radioButton.checked = true;
+    //     }
+    // }
+
+
+    function handleFileSelect(event, fileNumber) {
+        const fileInput = document.getElementById(`fileInput${fileNumber}`);
+        const fileDisplay = document.getElementById(`fileDisplay${fileNumber}`);
+        const fileName = document.getElementById(`fileName${fileNumber}`);
+        const removeButton = document.getElementById(`removeFileButton${fileNumber}`);
+        const selectButton = document.getElementById(`selectFileButton${fileNumber}`);
+    
+        // Handle file selection logic
+        if (event.target.files.length > 0) {
+            fileName.textContent = event.target.files[0].name;
+            fileDisplay.classList.remove('hidden');
+            removeButton.classList.remove('hidden');
+            selectButton.classList.add('hidden'); // Hide the select button after file selection
+        }
+    }
+    
+    function removeFile(fileNumber) {
+        const fileInput = document.getElementById(`fileInput${fileNumber}`);
+        const fileDisplay = document.getElementById(`fileDisplay${fileNumber}`);
+        const fileName = document.getElementById(`fileName${fileNumber}`);
+        const removeButton = document.getElementById(`removeFileButton${fileNumber}`);
+        const selectButton = document.getElementById(`selectFileButton${fileNumber}`);
+    
+        // Reset file input and hide display elements
+        fileInput.value = '';
+        fileDisplay.classList.add('hidden');
+        removeButton.classList.add('hidden');
+        selectButton.classList.remove('hidden'); // Show the select button again
+    }
+    
+    

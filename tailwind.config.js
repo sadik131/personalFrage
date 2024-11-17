@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}", "./*.{html,js}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '0',
+          sm: '0',
+          lg: '0',
+          xl: '0',
+        },
+      },
       fontFamily: {
         "roboto": "Roboto, sans- serif"
       },

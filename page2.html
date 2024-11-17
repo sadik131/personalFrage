@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
+    <!-- date piker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 
 <body>
@@ -30,108 +33,146 @@
                     <div class="lg:mx-14 mt-10">
                         <div class="block lg:flex gap-5">
                             <div class="block lg:flex border-y lg:border-x-0 border-x border-[#D1D5DB] pr-0 lg:pr-11 ">
-                                <div class="bg-[#f5f4f5] lg:border-b-0 border-b border-[#D1D5DB] p-4 w-full lg:w-[265px] h-full text-textprimary">
+                                <div
+                                    class="bg-[#f5f4f5] lg:border-b-0 border-b border-[#D1D5DB] p-4 w-full lg:w-[265px] h-full text-textprimary">
                                     <h1>Üben Sie weitere Beschäftigungen aus?</h1>
                                 </div>
-    
+
                                 <div class="ml-3 flex py-3 justify-center gap-2 flex-col">
                                     <!-- First Radio Group -->
                                     <div class="flex gap-5 w-[300px]">
                                         <span class="flex gap-2 rounded-md items-center">
-                                            <input name="employmentType" type="radio" checked
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                            <label class="text-textprimary text-3">Ja</label>
+                                            <input id="employmentYes" name="employmentType" type="radio" value="ja"
+                                                checked
+                                                class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                onchange="getSelectedGender()">
+                                            <label class="text-textprimary text-3" for="employmentYes">Ja</label>
                                         </span>
                                         <span class="flex gap-2 rounded-md items-center">
-                                            <input name="employmentType" type="radio"
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                            <label class="text-textprimary text-3">Nein</label>
+                                            <input id="employmentNo" name="employmentType" type="radio" value="ja"
+                                                checked
+                                                class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                onchange="getSelectedGender()">
+                                            <label class="text-textprimary text-3" for="employmentNo">Nein</label>
                                         </span>
                                     </div>
-                                    <p class="text-sm text-textprimary">Handelt es sich hierbei um eine geringfügige Beschäftigung?</p>
-                                
+                                    <p class="text-sm text-textprimary">Handelt es sich hierbei um eine geringfügige
+                                        Beschäftigung?</p>
+
                                     <!-- Second Radio Group -->
                                     <div class="flex items-center gap-5 w-[300px]">
                                         <span class="flex gap-2 rounded-md items-center">
-                                            <input name="partTimeEmployment" type="radio"
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                            <label class="text-textprimary text-3">Ja</label>
+                                            <input id="partTimeYes" name="partTimeEmployment" type="radio" value="ja"
+                                                checked
+                                                class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                onchange="getSelectedGender()">
+                                            <label class="text-textprimary text-3" for="partTimeYes">Ja</label>
                                         </span>
                                         <span class="flex gap-2 rounded-md items-center">
-                                            <input name="partTimeEmployment" type="radio" checked
-                                                class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                            <label class="text-textprimary text-3">Nein</label>
+                                            <input id="partTimeNo" name="partTimeEmployment" type="radio" value="ja"
+                                                checked
+                                                class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                onchange="getSelectedGender()">
+                                            <label class="text-textprimary text-3" for="partTimeNo">Nein</label>
                                         </span>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="block lg:flex mt-8 border-y border-x lg:border-x-0 border-[#D1D5DB] pr-0 lg:pr-11">
-                            <div class="bg-[#f5f4f5] border-b lg:border-b-0 border-[#D1D5DB] pt-3 w-full p-4 lg:w-[240px] pl-4 text-textprimary">
+                            <div
+                                class="bg-[#f5f4f5] border-b lg:border-b-0 border-[#D1D5DB] pt-3 w-full p-4 lg:w-[240px] pl-4 text-textprimary">
                                 <h1>Höchste Berufsausbildung</h1>
                             </div>
                             <div>
                                 <div class="flex flex-col ml-3 py-3 gap-5 w-[300px]">
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="noSchoolDiploma" name="highestQualification" type="radio" value="noSchoolDiploma"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3" for="noSchoolDiploma">ohne Schulabschluss</label>
+                                        <input id="noSchoolDiploma" name="highestQualification" type="radio" value="ja"
+                                            checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
+                                        <label class="text-textprimary text-3" for="noSchoolDiploma">ohne
+                                            Schulabschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="intermediateDegree" name="highestQualification" type="radio" value="intermediateDegree" checked
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3" for="intermediateDegree">Mittlere Reife/gleichwertiger Abschluss</label>
+                                        <input id="intermediateDegree" name="highestQualification" type="radio"
+                                            value="ja" checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
+                                        <label class="text-textprimary text-3" for="intermediateDegree">Mittlere
+                                            Reife/gleichwertiger Abschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="primarySchoolDiploma" name="highestQualification" type="radio" value="primarySchoolDiploma"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3" for="primarySchoolDiploma">Haupt-/Volksschulabschluss</label>
+                                        <input id="primarySchoolDiploma" name="highestQualification" type="radio"
+                                            value="ja" checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
+                                        <label class="text-textprimary text-3"
+                                            for="primarySchoolDiploma">Haupt-/Volksschulabschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="abitur" name="highestQualification" type="radio" value="abitur"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input id="abitur" name="highestQualification" type="radio" value="ja" checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
                                         <label class="text-textprimary text-3" for="abitur">Abitur/Fachabitur</label>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <div class="block lg:flex mt-8 border-y border-x lg:border-x-0 border-[#D1D5DB] lg:pr-11">
-                            <div class="bg-[#f5f4f5] pt-3 w-full p-4 lg:w-[240px] pl-4 text-textprimary border-b lg:border-b-0 border-[#D1D5DB]">
+                            <div
+                                class="bg-[#f5f4f5] pt-3 w-full p-4 lg:w-[240px] pl-4 text-textprimary border-b lg:border-b-0 border-[#D1D5DB]">
                                 <h1>Höchste Berufsausbildung</h1>
                             </div>
                             <div>
                                 <div class="flex flex-col ml-3 py-3 gap-5 w-[300px]">
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="noProfessionalQualification" name="highestp" type="radio" value="noProfessionalQualification"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3" for="noProfessionalQualification">ohne beruflichen Ausbildungsabschluss</label>
+                                        <input id="noProfessionalQualification" name="highestp" type="radio" value="ja"
+                                            checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
+                                        <label class="text-textprimary text-3" for="noProfessionalQualification">ohne
+                                            beruflichen Ausbildungsabschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="recognizedQualification" name="highestp" type="radio" value="recognizedQualification"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3" for="recognizedQualification">Anerkannte Berufsausbildung</label>
+                                        <input id="recognizedQualification" name="highestp" type="radio" value="ja"
+                                            checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
+                                        <label class="text-textprimary text-3" for="recognizedQualification">Anerkannte
+                                            Berufsausbildung</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="masterTechnician" name="highestp" type="radio" value="masterTechnician" checked
-                                            class="appearance-none h-6 w-[30px] border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
-                                        <label class="text-textprimary text-3" for="masterTechnician">Meister/Techniker/gleichwertiger Fachschulabschluss</label>
+                                        <div><input id="masterTechnician" name="highestp" type="radio" value="ja"
+                                                checked
+                                                class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                onchange="getSelectedGender()">
+                                        </div>
+                                        <label class="text-textprimary text-3"
+                                            for="masterTechnician">Meister/Techniker/gleichwertiger
+                                            Fachschulabschluss</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="bachelor" name="highestp" type="radio" value="bachelor"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input id="bachelor" name="highestp" type="radio" value="ja" checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
                                         <label class="text-textprimary text-3" for="bachelor">Bachelor</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
                                         <div>
-                                            <input id="diploma" name="highestp" type="radio" value="diploma"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                            <input id="diploma" name="highestp" type="radio" value="ja" checked
+                                                class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                onchange="getSelectedGender()">
                                         </div>
-                                        <label class="text-textprimary text-3" for="diploma">Diplom/Magister/Master/Staatsexamen</label>
+                                        <label class="text-textprimary text-3"
+                                            for="diploma">Diplom/Magister/Master/Staatsexamen</label>
                                     </span>
                                     <span class="flex gap-2 rounded-md items-center">
-                                        <input id="promotion" name="highestp" type="radio" value="promotion"
-                                            class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer">
+                                        <input id="promotion" name="highestp" type="radio" value="ja" checked
+                                            class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                            onchange="getSelectedGender()">
+                                        
                                         <label class="text-textprimary text-3" for="promotion">Promotion</label>
                                     </span>
                                 </div>
@@ -139,17 +180,19 @@
                         </div>
                         <div class="mt-16">
                             <div class="">
-                                <div class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] lg:pr-11 items-center">
+                                <div
+                                    class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] lg:pr-11 items-center">
                                     <h6
                                         class="bg-[#F5F4F5] p-[14px] border-b lg:border-b-0 border-[#D1D5DB] text-[15px] text-textprimary pl-4 w-full lg:w-[240px]">
                                         Beginn der Ausbildung<span class="text-[#BF1528]">*</span></h6>
                                     <div class="p-[14px] flex items-center gap-5 w-[300px]">
-                                        <input type="date" class="focus:outline-none text-textprimary w-full">
+                                        <input type="date" id="datePicker" class="flatpickr focus:outline-none text-textprimary w-full" />
                                     </div>
                                 </div>
                             </div>
                             <div class="">
-                                <div class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] lg:pr-11 items-center">
+                                <div
+                                    class="block lg:flex border-y border-x lg:border-x-0 border-[#D1D5DB] lg:pr-11 items-center">
                                     <h6
                                         class="bg-[#F5F4F5] border-b border-[#D1D5DB] p-[14px] text-[15px] text-textprimary pl-4 w-full  lg:w-[240px]">
                                         Voraussichtliches Ende der Ausbildung<span class="text-[#BF1528]">*</span></h6>
@@ -163,7 +206,7 @@
                             class="bg-[#1C93C5] my-7 text-white font-semibold flex items-center justify-center gap-3 rounded-md py-[10px]">weiter
                             <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    
+
                 </div>
                 <div class="flex items-center justify-between text-[10px] lg:text-sm p-4 text-[#6B7280] my-[30px]">
                     <h6>© 2024 Copyright iwv GmbH & Co. KG</h6>
@@ -178,8 +221,7 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                style="display: flex;"
+                                <i style="display: flex;"
                                     class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-[#1C93C5]">
@@ -195,7 +237,8 @@
                     <!-- Step 2 -->
                     <div class="flex items-start mb-6">
                         <div class="relative flex items-center">
-                            <div class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-lightText">
+                            <div
+                                class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-lightText">
                                 <span class="block w-[10px] h-[10px] bg-[#1C93C5] rounded-full"></span>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-gray-300">
@@ -219,7 +262,7 @@
                         <div class="ml-4">
                             <h4 class="text-[#1C93C5] font-semibold">Schritt 3</h4>
                             <p class="text-sm text-[#003767]">Steuer u. Versicherung</p>
-                        </div>
+                         </div>
                     </div>
 
                     <!-- Step 4 -->
@@ -253,6 +296,10 @@
             </div>
         </div>
     </section>
+
+    <!-- date piker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="./script.js"></script>
 
     <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
 

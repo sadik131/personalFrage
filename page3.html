@@ -33,51 +33,66 @@
                             <h1 class="text-[15px] font-semibold">Bescheinigungen elektronisch annehmen (Bea)</h1>
                             <div class="flex mt-3 gap-2 items-start">
                                 <div>
-                                    <input name="radio" type="radio" value="widerspruch" id="widerspruch"
-                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer" onchange="captureSelection()">
+                                    <input id="widerspruch" name="radio" type="radio" value="widerspruch"
+                                        class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                        onchange="getSelectedGender()">
                                 </div>
-                                <label for="widerspruch" class="text-sm">Ich widerspreche der elektronischen Übermittlung von Arbeits- und Nebeneinkommensbescheinigungen an die Bundesagentur für Arbeit.</label>
+                                <label for="widerspruch" class="text-sm" onclick="toggleRadio()">Ich widerspreche der
+                                    elektronischen
+                                    Übermittlung von Arbeits- und Nebeneinkommensbescheinigungen an die Bundesagentur
+                                    für Arbeit.</label>
                             </div>
                         </div>
                         <div class="flex gap-5">
-                            <div class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
-                                <h6 class="bg-[#F5F4F5] w-full p-[14px] text-textprimary border-b border-[#D1D5DB] lg:border-b  lg:w-[240px]">
+                            <div
+                                class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                <h6
+                                    class="bg-[#F5F4F5] w-full p-[14px] text-textprimary border-b border-[#D1D5DB] lg:border-b  lg:w-[240px]">
                                     Steuer-Identifikationsnr.<span class="text-[#BF1528]">*</span></h6>
                                 <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                    <input type="tel" class="focus:outline-none text-textprimary w-full">
+                                    <input type="tel" placeholder="123 456 789"
+                                        class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
-                            <div class="block border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] w-full lg:pr-11 items-center">
-                                <h6 class="bg-[#F5F4F5] w-full p-[14px] text-textprimary border-b border-[#D1D5DB] lg:border-b lg:w-[240px]">Steuerklasse <span
-                                        class="text-[#BF1528]">*</span></h6>
+                            <div
+                                class="block border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] w-full lg:pr-11 items-center">
+                                <h6
+                                    class="bg-[#F5F4F5] w-full p-[14px] text-textprimary border-b border-[#D1D5DB] lg:border-b lg:w-[240px]">
+                                    Steuerklasse <span class="text-[#BF1528]">*</span></h6>
                                 <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                    <input type="number" class="focus:outline-none text-textprimary w-full">
+                                    <input type="number" placeholder="4"
+                                        class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
-                            <div class="block border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] w-full lg:pr-11 items-center">
-                                <h6 class="bg-[#F5F4F5] border-b lg:border-b-0 border-[#D1D5DB] w-full p-[14px] text-textprimary  lg:w-[240px]">Kinderfreibeträge<span
-                                        class="text-[#BF1528]">*</span></h6>
+                            <div
+                                class="block border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] w-full lg:pr-11 items-center">
+                                <h6
+                                    class="bg-[#F5F4F5] border-b lg:border-b-0 border-[#D1D5DB] w-full p-[14px] text-textprimary  lg:w-[240px]">
+                                    Kinderfreibeträge<span class="text-[#BF1528]">*</span></h6>
                                 <div class="ml-3 flex p-[14px] items-center gap-5 lg:w-[300px]">
-                                    <input type="number" class="focus:outline-none text-textprimary w-full">
+                                    <input type="number" placeholder="6"
+                                        class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="lg:mx-14">
                         <div class="flex gap-5">
-                            <div class="block border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] w-full lg:pr-11 items-center">
+                            <div
+                                class="block border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] w-full lg:pr-11 items-center">
                                 <h6 class="bg-[#F5F4F5]  p-[14px] text-textprimary  lg:w-[240px]">Konfession<span
                                         class="text-[#BF1528]">*</span></h6>
                                 <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                    <input type="text" class="focus:outline-none text-textprimary w-full">
+                                    <input type="text" placeholder="evangelisch"
+                                        class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
 
                                 </div>
                             </div>
@@ -86,31 +101,43 @@
                     <div>
                         <div class="lg:mx-14 mt-10">
                             <div class="flex gap-5">
-                                <div class="block border-x w-full lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                <div
+                                    class="block border-x w-full lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
                                     <div class="pl-4 py-2 bg-[#F5F4F5] ">
                                         <h6 class="text-textprimary  lg:w-[240px]">Gesetzl. Krankenkasse <span
                                                 class="text-[#BF1528]">*</span></h6>
                                         <p class="text-fontColor text-xs">(bei PKVp)></p>
                                     </div>
                                     <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                        <input type="text" class="focus:outline-none text-textprimary w-full">
+                                        <input type="text" placeholder="BARMER"
+                                            class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex gap-5">
-                                    <div class="block border-x lg:border-x-0 lg:flex border-y w-full border-[#D1D5DB] lg:pr-11 items-center">
-                                        <h6 class="bg-[#F5F4F5] border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[256px]">Elterneigenschaft</h6>
+                                    <div
+                                        class="block border-x lg:border-x-0 lg:flex border-y w-full border-[#D1D5DB] lg:pr-11 items-center">
+                                        <h6
+                                            class="bg-[#F5F4F5] border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[256px]">
+                                            Elterneigenschaft</h6>
                                         <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
                                             <span class="flex gap-2 rounded-md items-center">
-                                                <input name="elterneigenschaft" type="radio" value="ja" id="elterneigenschaft-ja"
-                                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer" onchange="captureSelection()">
-                                                <label for="elterneigenschaft-ja" class="text-textprimary text-3">ja</label>
+                                                <input id="elterneigenschaft-ja" name="elterneigenschaft" type="radio"
+                                                    value="ja" checked
+                                                    class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                    onchange="getSelectedGender()">
+                                                
+                                                <label for="elterneigenschaft-ja"
+                                                    class="text-textprimary text-3">ja</label>
                                             </span>
                                             <span class="flex gap-2 rounded-md items-center">
-                                                <input name="elterneigenschaft" type="radio" value="nein" id="elterneigenschaft-nein"
-                                                    class="appearance-none h-6 w-6 border-2 border-[#D1D5DB] rounded-md checked:bg-[#1C93C5] bg-[#F5F4F5] cursor-pointer" onchange="captureSelection()">
-                                                <label for="elterneigenschaft-nein" class="text-textprimary text-3">nein</label>
+                                                <input id="elterneigenschaft-nein" name="elterneigenschaft" type="radio"
+                                                    value="nein" checked
+                                                    class="custom-radio h-6 w-6 border-2 border-[#D1D5DB] cursor-pointer"
+                                                    onchange="getSelectedGender()">
+                                                <label for="elterneigenschaft-nein"
+                                                    class="text-textprimary text-3">nein</label>
                                             </span>
                                         </div>
                                     </div>
@@ -121,85 +148,34 @@
                             <!-- Toggle Button -->
                             <div class="mb-5">
                                 <label class="relative inline-flex items-center cursor-pointer">
+                                    <!-- Hidden checkbox input for toggling -->
                                     <input type="checkbox" class="sr-only peer" id="vwl-toggle" onchange="toggleVWL()" />
-                                    <div
-                                        class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:bg-blue-600 transition-all duration-300">
+                            
+                                    <!-- Toggle background with centered icon -->
+                                    <div class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-blue-600 transition-all duration-300 flex items-center justify-center">
+                                        <!-- Check icon that shows when toggle is active -->
+                                        <i class="fa-solid fa-check text-black opacity-0 peer-checked:opacity-100"></i>
                                     </div>
-                                    
-                                    <span
-                                        class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transform transition-transform duration-300 peer-checked:translate-x-5"></span>
+                            
+                                    <!-- Moving circle indicator -->
+                                    <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transform transition-transform duration-300 peer-checked:translate-x-5"></span>
+                            
+                                    <!-- Label text -->
                                     <p class="text-textprimary ml-2">Vermögenswirksame Leistungen</p>
                                 </label>
                             </div>
                             
-                            <div class="flex gap-5">
-                                <div class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[240px]">Empfänger VWL<span class="text-[#BF1528]">*</span></h6>
-                                    <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                        <input type="text" class="focus:outline-none text-textprimary w-full">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            
 
-                        <div class="lg:mx-14">
                             <div class="flex gap-5">
-                                <div class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary  lg:w-[240px]">
-                                        Staatsangehörigkeit<span class="text-[#BF1528]">*</span></h6>
-                                        <div class="p-[14px] flex items-center w-[340px] pr-5 justify-between gap-5 relative">
-                                            <select id="nationality" class="focus:border-none focus:outline-none w-full appearance-none">
-                                                <option value="" disabled selected>Select your nationality</option>
-                                                <option value="afghan">Afghan</option>
-                                                <option value="albanian">Albanian</option>
-                                                <option value="algerian">Algerian</option>
-                                                <option value="american">American</option>
-                                                <option value="argentine">Argentine</option>
-                                                <option value="australian">Australian</option>
-                                                <option value="austrian">Austrian</option>
-                                                <option value="bangladeshi">Bangladeshi</option>
-                                                <option value="belgian">Belgian</option>
-                                                <option value="brazilian">Brazilian</option>
-                                                <option value="british">British</option>
-                                                <option value="canadian">Canadian</option>
-                                                <option value="chinese">Chinese</option>
-                                                <option value="dutch">Dutch</option>
-                                                <option value="egyptian">Egyptian</option>
-                                                <option value="french">French</option>
-                                                <option value="german">German</option>
-                                                <option value="indian">Indian</option>
-                                                <option value="italian">Italian</option>
-                                                <option value="japanese">Japanese</option>
-                                                <option value="mexican">Mexican</option>
-                                                <option value="nigerian">Nigerian</option>
-                                                <option value="russian">Russian</option>
-                                                <option value="south-african">South African</option>
-                                                <option value="spanish">Spanish</option>
-                                                <option value="ukrainian">Ukrainian</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                            <i class="fa-solid text-[#EE7F06] w-[11px] h-[6px] fa-angle-down absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"></i>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:mx-14">
-                            <div class="flex gap-5">
-                                <div class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary  lg:w-[240px]">Familienstand<span
-                                            class="text-[#BF1528]">*</span></h6>
-                                            <div class="p-[14px] flex items-center w-[340px] pr-5 justify-between gap-5 relative">
-                                                <select id="marital-status" class="focus:border-none focus:outline-none w-full appearance-none">
-                                                    <option value="" disabled selected>Select your marital status</option>
-                                                    <option value="single">Single</option>
-                                                    <option value="married">Married</option>
-                                                    <option value="divorced">Divorced</option>
-                                                    <option value="widowed">Widowed</option>
-                                                    <option value="separated">Separated</option>
-                                                    <option value="in_a_relationship">In a Relationship</option>
-                                                </select>
-                                                <i class="fa-solid text-[#EE7F06] w-[11px] h-[6px] fa-angle-down absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"></i>
-                                            </div>
+                                <div
+                                    class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[240px]">
+                                        Empfänger VWL<span class="text-[#BF1528]">*</span></h6>
+                                    <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
+                                        <input type="text" placeholder="AXA Lebensversicherung AG" class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -210,11 +186,26 @@
                     <div>
                         <div class="lg:mx-14">
                             <div class="flex gap-5">
-                                <div class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary pl-4 lg:w-[240px]">IBAN<span
-                                            class="text-[#BF1528]">*</span></h6>
+                                <div
+                                    class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary pl-4 lg:w-[240px]">
+                                        AG-Anteil (Höhe mtl.)<span class="text-[#BF1528]">*</span></h6>
                                     <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                        <input type="text" class="focus:outline-none text-textprimary w-full">
+                                        <input type="text" placeholder="50,00 EUR" class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:mx-14">
+                            <div class="flex gap-5">
+                                <div
+                                    class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary pl-4 lg:w-[240px]">
+                                        Seit wann<span class="text-[#BF1528]">*</span></h6>
+                                    <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
+                                        <input type="text" placeholder="05/1995" class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
 
                                     </div>
                                 </div>
@@ -222,13 +213,39 @@
                         </div>
                         <div class="lg:mx-14">
                             <div class="flex gap-5">
-                                <div class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
-                                    <h6 class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[240px]">BIC<span
-                                            class="text-[#BF1528]">*</span></h6>
+                                <div
+                                    class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary pl-4 lg:w-[240px]">
+                                        Vertragsnr.<span class="text-[#BF1528]">*</span></h6>
                                     <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
-                                        <input type="text" class="focus:outline-none text-textprimary w-full">
+                                        <input type="text" placeholder="02154-AXA-2564656 " class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
 
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:mx-14">
+                            <div class="flex gap-5">
+                                <div
+                                    class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                    <h6
+                                        class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[240px]">
+                                        IBAN<span class="text-[#BF1528]">*</span></h6>
+                                    <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
+                                        <input type="text" placeholder="DE 97 5086 3513 0005 7717 06" class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="block w-full border-x lg:border-x-0 lg:flex border-y border-[#D1D5DB] lg:pr-11 items-center">
+                                <h6
+                                    class="bg-[#F5F4F5]  border-[#D1D5DB] border-b lg:border-b-0 w-full p-[14px] text-textprimary lg:w-[240px]">
+                                    BIC<span class="text-[#BF1528]">*</span></h6>
+                                <div class="ml-3 flex p-[14px] items-center gap-5 w-[300px]">
+                                    <input type="text" placeholder="GENODE51MIC" class="placeholder:text-textprimary focus:outline-none text-textprimary w-full">
+
                                 </div>
                             </div>
                             <a href="page4.html"
@@ -250,8 +267,8 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                    style="display: flex;" class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
+                                <i style="display: flex;"
+                                    class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
                             </div>
@@ -268,8 +285,8 @@
                         <div class="relative flex items-center">
                             <div
                                 class="w-6 h-6 items-center justify-center rounded-full border-[#1C93C5] text-textpriborder-[#1C93C5]">
-                                <i
-                                    style="display: flex;" class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
+                                <i style="display: flex;"
+                                    class="fa-solid fa-check flex items-center justify-center w-6 h-6 text-white  bg-[#1C93C5] rounded-full"></i>
                             </div>
                             <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-0.5 h-11 bg-lightText">
                             </div>
@@ -331,6 +348,7 @@
         </div>
     </section>
 
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
 </body>
 
