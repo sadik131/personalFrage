@@ -153,30 +153,24 @@
                                 <!-- Toggle Button -->
                                 <div class="mb-5">
                                     <label class="relative inline-flex items-center cursor-pointer">
-                                        <!-- Hidden checkbox input for toggling -->
-                                        <input type="checkbox" class="sr-only peer" id="vwl-toggle"
-                                            onchange="toggleVWL()" />
-
-                                        <!-- Toggle background with centered icon -->
-                                        <div
-                                            class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-lightText transition-all duration-300 flex items-center justify-center">
+                                        <!-- Checkbox input (this is the "peer" element) -->
+                                        <input type="checkbox" class="sr-only peer" id="vwl-toggle" onchange="toggleVWL()" />
+                                
+                                        <!-- Background toggle switch -->
+                                        <div class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-lightText transition-all duration-300 flex items-center justify-center">
                                         </div>
-                                        <!-- Moving circle indicator -->
-                                        <span
-                                            class="absolute left-[1px] top-[1px] w-[22px] h-[22px] bg-white rounded-full transform transition-transform duration-300 peer-checked:translate-x-5 flex items-center justify-center">
-
-                                            <!-- "x" symbol visible when toggle is unchecked -->
-                                            <span
-                                                class="text-lightText opacity-100 peer-checked:opacity-0 transition-opacity duration-300">x</span>
-
-                                            <!-- Check icon that shows only when toggle is active -->
-                                            <i
-                                                class="fa-solid fa-check text-lightText opacity-0 peer-checked:opacity-100 transition-opacity duration-300 h-[11px] w-[9px]"></i>
+                                
+                                        <!-- Toggle knob with the check and "x" inside -->
+                                        <span class="absolute left-[1px] top-[1px] w-[22px] h-[22px] bg-white rounded-full transform transition-transform duration-300 peer-checked:translate-x-5 flex items-center justify-center">
+                                            <span class="text-lightText opacity-0 peer-checked:opacity-100 transition-opacity duration-300">x</span>
+                                            <!-- <i class="fa-solid fa-check text-lightText opacity-0 peer-checked:opacity-100 transition-opacity duration-300 h-[11px] w-[9px]"></i> -->
                                         </span>
+                                
                                         <!-- Label text -->
                                         <p class="text-textprimary ml-2">Vermögenswirksame Leistungen</p>
                                     </label>
                                 </div>
+                                
 
                                 <div class="flex gap-5">
                                     <div
