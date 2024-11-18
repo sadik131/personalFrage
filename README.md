@@ -12,13 +12,6 @@ https://personal-frage.vercel.app/
 
 This is a simple website created using HTML and CSS. Follow the instructions below to clone, install, and run the project.
 
- 1. clone the repository from a terminal `git@github.com:sadik131/personalFrage`
- 2. naviage to the project directory  `cd personalFrage`
- 3. install project `npm start`
-## Installation
-
-This is a simple website created using HTML and CSS. Follow the instructions below to clone, install, and run the project.
-
  1. clone the repository from a terminal `git@github.com:sadik131/personalFrage.git`
  2. naviage to the project directory  `cd personalFrage`
  3. install project `npm start`
